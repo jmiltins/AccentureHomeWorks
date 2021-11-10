@@ -74,7 +74,17 @@ if Int(userInputAge) != nil{
     print(Int(userInputAge)!)
 }
 else {
+    
     print("This age \(userInputAge) Can NOT be converted to Int")
+// Try to convert
+    var textToInt: String = ""
+    for el in userInputAge{
+        if el.isNumber {
+            textToInt.append(el)
+            
+        }
+    }
+    print ("Is your age \(Int(textToInt)!)?")
 }
 
 
